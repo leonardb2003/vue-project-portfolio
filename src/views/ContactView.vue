@@ -1,4 +1,7 @@
 <template>
+  <div class="header">
+  <h1>Contact Us</h1>
+</div>
   <section id="contact" class="contact">
    <section class="form-group">
                 <div class="row" data-aos="fad-in">
@@ -69,6 +72,10 @@
 <style>
 .contact{
     padding-bottom: 130px;
+}
+ .header h1{
+  color: #149ddd;
+  font-size: 90px;
 }  
 /* .contact .info{
     padding: 30px;
@@ -89,19 +96,19 @@
     border-radius: 50%;
     transform: all 0.3s ease-in-out;
 }
-/* .contact .info h1{
+ .contact .info h1{
     padding: 0 0 0 60px;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
     color: #050d18;
-} */
-.contact .formspree-form{
+}  
+/* .contact .formspree-form{
     width: 100%;
-    padding: 30px;
+    padding: 0px;
     background: #dff3fc;
     box-shadow: 0 0 24px 0 rgba(0,0,0,0.12);
-}
+} */
 .contact .formspree-form .validate{
     display: none;
     color: red;
@@ -113,7 +120,8 @@
     padding-bottom: 8px;
 }
 .contact .formspree-form input{
-    height: 14px;
+    height: 17px;
+    border-radius: 6px;
 }
 .contact .formspree-form input,
 .contact .formspree-form textarea{

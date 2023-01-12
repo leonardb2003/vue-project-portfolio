@@ -1,5 +1,7 @@
 <template>
-    <h1>Testimonials</h1>
+    <div class="name">
+        <h1>Testimonials</h1>
+    </div>
      <div class="container" style="display: inline-block;">
         <div class="row justify-content-center cols-3">
             <div class="col">
@@ -106,5 +108,10 @@ export default {
     background-color: rgb(237, 246, 255);
     color: rgb(62, 83, 240);
     transform: rotateY(180deg);
+  }
+  .name h1{
+    color: #0e6f90;
+    font-size: 55px;
+    text-transform: uppercase;
   }
 </style>

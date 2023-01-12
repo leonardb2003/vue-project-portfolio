@@ -3,17 +3,17 @@
         <div class="container">
           <div class="section-title">
             <h2>About Me</h2>
-            <p>I am 19 years old, I live in Kensington and I am a very ambitious young lady.
+            <!-- <p>I am 19 years old, I live in Kensington and I am a very ambitious young lady.
               I love trying new things and to learn more to broaden my knowledge. I am a hard working person and always find ways to better myself.
               In my free time I spend time with family and I attend church to keep my spiritual life on par.
-            </p>
+            </p> -->
           </div>
           <div class="row">
-            <div class="col-lg-4" data-aos="fade-right">
+            <!-- <div class="image" data-aos="fade-right"> -->
                 <img src="https://i.postimg.cc/L2mcZDVH/IMG-20210606-WA0167.jpg" id="img">
-            </div>
+            <!-- </div> -->
             <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <h3>Web Development</h3>
+              <h3>Web Developer</h3>
               <p class="font-italic">I am in training as a web development.I am trying my best everyday and learning as I go
                 along.
                 It's a lot to take in, a web development is someone that creates websites and can became
@@ -42,9 +42,13 @@
         </div>
     </section><!-- End Section -->
 </template>
+
 <style>
+.about .row{
+  color: black;
+}
 .about .content h3{
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 700;
     color: #0e6f9c;
 }
@@ -63,8 +67,26 @@
 .about .content p:last-child{
     margin-bottom: 0;
 }
-.about .img{
-  width: 100px;
-  height: 150px;
+.about .section-title h2{
+  font-size: 80px;
+  font-weight: 700;
+  color: #0e6f9c;
+  text-transform: uppercase;
+}
+#img{
+  width: 350px;
+  height: 420px;
+  float: left;
+  border-radius: 20px;
+}
+.about .section-title p{
+  font-size: 22px;
+  font-weight: 500;
+  color: black;
+}
+.about .font-italic{
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
 }
 </style>

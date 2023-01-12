@@ -1,12 +1,9 @@
 <template>
+  <div class="background">
 <Navbar/>
 <router-view/>
 <Footer/>
-<div class="icons">
-<a href="https://www.instagram.com/leonard_beyonce/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-<a href="https://twitter.com/beyonce_leonard" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-<a href="https://www.facebook.com/beyonce.leonard.39" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
-</div>
+  </div>
 </template>
 
 <script>
@@ -20,6 +17,9 @@ export default {
 </script>
 
 <style>
+.background{
+  background-color: #042547;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,8 +41,5 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #3f9be1;
-}
-.icons{
-  font-size: 25px;
 }
 </style>
