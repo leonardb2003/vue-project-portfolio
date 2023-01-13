@@ -1,12 +1,10 @@
 <template>
-  <div class="heading" >
-    <h1>Resume Page</h1>
-  </div> 
+  <Resume/>
 </template>
-<style>
-.heading{
-    font-size: 30px;
-    color: rgb(55, 115, 247);
-}
 
-</style>
+<script>
+import Resume from '@/components/Resume.vue'
+export default {
+  components: {Resume}
+}
+</script>
