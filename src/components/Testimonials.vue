@@ -2,8 +2,8 @@
     <div class="name">
         <h1>Testimonials</h1>
     </div>
-     <div class="container" style="display: inline-block;">
-        <div class="row justify-content-center cols-3">
+     <div class="container" >
+        <div style="display: inline-block;">
             <div class="col">
                 <div class="row pleaseWork">
                     <div class="flip-card" v-for="item in testimonials">
@@ -44,7 +44,7 @@ export default {
                     test:'Beyonce is a resilient character and always looking out for others.'
                 },
                 {name: 'Oslin Johnson',
-                    title: 'Colleague',
+                    title: 'Lecturer',
                     img:"https://i.postimg.cc/c4sr7gB5/pic2.jpg",
                     test:'Beyonce is a unique person with great determination and not afraid to ask questions, which is a great quality to becoming a great professional. She is a diligent person as well with good time management skills.'
                 },
@@ -54,7 +54,7 @@ export default {
                     test:'Beyoncé is very calm and observant, at the same time though, communicative especially in group work. Open and understanding and works well in groups. She is also the type to dedicate herself to effectively complete any task at hand. Beyoncé is very trustworthy and is someone you can rely on.'
                 },
                 {name: 'Ryan Thomas',
-                    title: 'Colleague',
+                    title: 'Lecturer',
                     img:"https://i.postimg.cc/NMg4vfwJ/testimonial-img-5.jpg",
                     test:'Beyonce is a strong and hard-working individual who always tries to ensure that she has trialed and tested multiple solutions before asking for any help, which strongly contributes to her growing as a strong and quick learner. Beyonce also has a good sense of humor and a bubbly personality.'
                 },
@@ -77,7 +77,6 @@ export default {
     perspective: 1000px;
     margin-top: 20px;
   }
-  /* This container is needed to position the front and back side */
   .flip-card-inner {
     position: relative;
     width: 100%;
@@ -86,24 +85,20 @@ export default {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: white;
     color: black;
   }
-  /* Style the back side */
   .flip-card-back {
     background-color: rgb(237, 246, 255);
     color: rgb(62, 83, 240);
@@ -116,8 +111,23 @@ export default {
   }
   .pleaseWork {
     display: grid;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .pleaseWork{
+        display: grid;
+        grid-template-rows: repeat(3, fr);
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 674px) {
+    .pleaseWork{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
   }
 </style>

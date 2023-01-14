@@ -17,8 +17,13 @@ export default {
 </script>
 
 <style>
+html{
+  padding: 0;
+}
 .background{
+  overflow-x: hidden;
   background-color: #042547;
+  width: 100%;
   min-height: 100vh;
   min-width: 100vh;
 }

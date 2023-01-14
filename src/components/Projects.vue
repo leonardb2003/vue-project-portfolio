@@ -6,15 +6,15 @@
            <div class="row justify-content-center cols-3">
                <div class="col">
                    <div class="row pleaseWork">
-                       <div class="card" v-for="item in projects">
+                       <div v-for="item in projects">
                            <div class="card" data-aos="fade-down" data-aos-duration="3000">
-                               <div class="card-front">
+                               <div class="card-front ">
                                    <img
                                    :src="item.img"
                                    alt="Avatar"
-                                   style="width:400px; height: 350px"/>
+                                   style="width:350px; height: 300px"/>
                                </div>
-                               <div class="card">
+                               <div>
                                    <h1>{{ item.name }}</h1>
                                    <h4><a :href="item.github">Github</a></h4>
                                    <h4><a :href="item.netlify">netlify</a></h4>
@@ -42,7 +42,7 @@
                     github:'https://github.com/leonardb2003/javascript-project.git',
                     netlify:'https://beyonce-javascript-project.netlify.app/',
                    },
-                   {name:'Portfolio draft',
+                   {name:' First Portfolio',
                     img:'https://i.postimg.cc/xdS5vR2Z/Screenshot-20230112-143855.png',
                     github:'https://github.com/leonardb2003/My-Portfolio.git',
                     netlify:'https://beyonce-leonard-portfolio.netlify.app/',
@@ -68,7 +68,11 @@
        }
    }
    </script>
-   <style>
+   <style scoped>
+   .card{
+    border: 2px solid black;
+    border-radius: 1rem;
+   }
    .work h1{
        font-size: 40px;
        color: #3773f7;
@@ -77,9 +81,24 @@
        color: #0e69f0;
    }
    .pleaseWork {
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr;
-       gap: 20px;
-       padding: 20px;
-     }
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .pleaseWork{
+        display: grid;
+        grid-template-rows: repeat(3, fr);
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 674px) {
+    .pleaseWork{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+  }
    </style>
